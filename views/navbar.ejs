@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">The New IMDB</a>
+    </div>
+    <ul class="nav navbar-light bg-light">
+      <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link" href="/favorites">Favorites</a></li>
+    </ul>
+    <ul class="nav navbar-light bg-light">
+          <form action="/search?source=hp" method="post" id="search-form" class="d-flex">
+            <li class="nav-item">
+            <div class="form-group ">
+              <select name="cat" class="form-control bg-light border-0 mr-2" id="cat" >
+                <option value="movie">Movie Title</option>
+                <option value="person">Actor</option>
+              </select>
+            </div>
+          </li>
+          <li class="nav-item">
+            <input type="text" id="movie" placeholder="Search" name="movieSearch" />
+            <input type="submit" class="btn btn-primary" value="Search"/>
+          </li>
+          </form>   
+    </ul>
+  </div>
+</nav>
