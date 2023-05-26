@@ -1,17 +1,17 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">The New IMDB</a>
     </div>
-    <ul class="nav navbar-light bg-light">
+    <ul class="nav navbar-nav navbar-middle">
       <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
       <li class="nav-item"><a class="nav-link" href="/favorites">Favorites</a></li>
     </ul>
-    <ul class="nav navbar-light bg-light">
-          <form action="/search?source=hp" method="post" id="search-form" class="d-flex">
+    <!-- <ul class="nav navbar-nav navbar-right"> -->
+          <form action="/search?source=hp" method="post" id="search-form" class="nav navbar-form navbar-right">
             <li class="nav-item mr-2">
             <div class="form-group ">
-              <select name="cat" class="form-control bg-light border-0" id="cat" >
+              <select name="cat" class="form-control bg-default border-0" id="cat" >
                 <option value="movie">Movie Title</option>
                 <option value="person">Actor</option>
               </select>
@@ -22,6 +22,6 @@
             <input type="submit" class="btn btn-primary" value="Search"/>
           </li>
           </form>   
-    </ul>
+    <!-- </ul> -->
   </div>
 </nav>
