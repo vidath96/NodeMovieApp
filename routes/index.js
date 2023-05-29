@@ -40,4 +40,24 @@ router.get('/movie/:id',(req,res,next) => {
   })
 })
 
+router.post('/search',(req,res,next) => {
+  const category = req.body.cat
+  const searchTerm = encodeURI(req.body.movieSearch)
+
+  const movieUrl = `${apiBaseUrl}/search/${category}?query=${searchTerm}&api_key=${apiKey}`
+  
+  request.get(movieUrl,(error,response,movieRes) => {
+  // res.send(movieUrl)
+    let parseData = JSON.parse(movieRes)
+    if(category == "person"){
+      parseData.results = parseData.results[0].known_for
+    }
+
+    res.render('index', {
+      parseData : parseData.results 
+    })
+
+  })
+})
+
 module.exports = router;
