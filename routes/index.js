@@ -36,7 +36,7 @@ router.get('/movie/:id',(req,res,next) => {
   const movieId = req.params.id
   // console.log(req.params.id)
   const singleMovieUrl = `${apiBaseUrl}/movie/${movieId}?api_key=${apiKey}`
-  console.log(singleMovieUrl)
+  // console.log(singleMovieUrl)
   request.get(singleMovieUrl,(error,response, movieData) => {
     const parseData = JSON.parse(movieData)
   res.render('single-movie',{parseData: parseData})
